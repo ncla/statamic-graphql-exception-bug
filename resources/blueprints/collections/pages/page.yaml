@@ -1,0 +1,46 @@
+title: Page
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: content
+        field:
+          type: markdown
+          display: Content
+          localizable: true
+      -
+        handle: responsive_field
+        field:
+          use_breakpoints: true
+          allow_ratio: true
+          allow_fit: true
+          breakpoints:
+            - sm
+            - md
+            - lg
+            - xl
+            - 2xl
+          restrict: false
+          allow_uploads: true
+          display: 'Responsive Field'
+          type: responsive
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
